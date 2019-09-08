@@ -24,3 +24,17 @@ To call the get endpoint to bit coin data:
 
 http://localhost:8080/bigdata/bitcoin
 
+
+To run docker: 
+mvn clean install
+docker build -t spring-client .
+docker run -p 8080:8081 spring-client:latest
+
+The app should be deployed on port 5000
+
+Remove image command: 
+
+docker image rm spring-client:latest --force
+
+Follow instructions for docker setup on the website:
+https://www.callicoder.com/spring-boot-docker-example/

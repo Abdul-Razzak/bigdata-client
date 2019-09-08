@@ -99,7 +99,7 @@ public class RestfulController {
 
 	@RequestMapping(value = "/bigdata/bitcoin", method = RequestMethod.GET)
 	public ResponseEntity<String> findBitcoin() throws IOException{
-		final String uri = "http://localhost:8081/bitcoin";
+		final String uri = "http://localhost:5000/bitcoin";
 
 		RestTemplate restTemplate = new RestTemplate();
 		String result = restTemplate.getForObject(uri, String.class);
